@@ -1,7 +1,5 @@
 package com.despatch.service.dto;
 
-import javax.persistence.Column;
-
 public class CompanyDto {
 
 	private Long Id;

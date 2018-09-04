@@ -1,7 +1,5 @@
 package com.despatch.rest.request;
 
-import javax.persistence.Column;
-
 import com.despatch.entity.enumerator.UMEnum;
 
 public class ProductRequest {
