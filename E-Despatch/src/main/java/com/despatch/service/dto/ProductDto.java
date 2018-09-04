@@ -1,28 +1,22 @@
-package com.despatch.entity;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+package com.despatch.service.dto;
 
 import com.despatch.entity.enumerator.UMEnum;
 
-@Entity
-@Table(name = "product")
-public class Product {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
+public class ProductDto {
 	private Long id;
 
-	@Column(name = "name")
 	private String name;
 
-	@Column(name="um")
 	private UMEnum um;
+
+	
+	
+	public ProductDto(Long id, String name, UMEnum um) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.um = um;
+	}
 
 	public Long getId() {
 		return id;
@@ -50,3 +44,4 @@ public class Product {
 
 	
 }
+

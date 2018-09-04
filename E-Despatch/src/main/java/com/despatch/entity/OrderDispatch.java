@@ -7,12 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.despatch.entity.enumerator.StatusEnum;
+
 @Entity
-@Table(name = "order")
-public class Order {
+@Table(name = "orderDispatch")
+public class OrderDispatch {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private Long id;
 	
 	@Column(name = "truckNumber")
@@ -24,8 +27,8 @@ public class Order {
 	@Column(name = "status")
 	private StatusEnum status;
 
-	@Column(name = "orderNumber")
-	private String orderNumber;
+	@Column(name = "orderDispatchNumber")
+	private String orderDispatchNumber;
 	
 	
 	
@@ -80,7 +83,7 @@ public class Order {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Order other = (Order) obj;
+		OrderDispatch other = (OrderDispatch) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -101,12 +104,19 @@ public class Order {
 		return true;
 	}
 
-	public String getOrderNumber() {
-		return orderNumber;
+	public String getOrderDispatchNumber() {
+		return orderDispatchNumber;
 	}
+	
+	
 
-	public void setOrderNumber(String orderNumber) {
-		this.orderNumber = truckNumber+ "-" + hashCode();
+	public void setOrderDispatchNumber(String orderDispatchNumber) {
+		if (orderDispatchNumber == null) {
+			this.orderDispatchNumber = truckNumber+ "-" + hashCode();
+		} else {
+			this.orderDispatchNumber = orderDispatchNumber;
+		}
+		
 	}
 
 	

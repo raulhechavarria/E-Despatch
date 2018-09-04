@@ -8,4 +8,5 @@ import com.despatch.entity.Product;
 @Repository
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
+
 }
