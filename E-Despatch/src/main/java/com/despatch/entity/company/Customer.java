@@ -1,4 +1,4 @@
-package com.despatch.entity;
+package com.despatch.entity.company;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

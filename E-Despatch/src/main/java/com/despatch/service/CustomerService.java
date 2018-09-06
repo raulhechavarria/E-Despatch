@@ -11,4 +11,8 @@ public interface CustomerService {
 
 	List<CustomerDto> findAll();
 
+	Boolean deleteCustomer(Long id);
+
+	CustomerDto updateCustomer(CustomerRequest customerRequest);
+
 }

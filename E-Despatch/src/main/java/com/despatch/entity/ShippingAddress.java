@@ -2,6 +2,8 @@ package com.despatch.entity;
 
 import javax.persistence.*;
 
+import com.despatch.entity.company.Customer;
+
 @Entity
 @Table(name = "shippingAddress")
 public class ShippingAddress {
