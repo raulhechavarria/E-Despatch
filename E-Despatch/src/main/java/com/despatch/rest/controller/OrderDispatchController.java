@@ -3,6 +3,7 @@ package com.despatch.rest.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,5 +33,9 @@ public class OrderDispatchController {
 	public @ResponseBody OrderDispatchDto saveOrderDispatch(@RequestBody OrderDispatchRequest orderDispatchRequest) {
 		return orderDispatchService.save(orderDispatchRequest);
 	}
-
+	
+	@PutMapping(name = "/orderDispatch")
+	public @ResponseBody OrderDispatchDto updateOrderDispatch(@RequestBody OrderDispatchRequest orderDispatchRequest) {
+		return orderDispatchService.update(orderDispatchRequest);
+	}
 }

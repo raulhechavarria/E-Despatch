@@ -12,5 +12,7 @@ public interface OrderDispatchService {
 
 	OrderDispatchDto save(OrderDispatchRequest orderDispatchRequest);
 
+	OrderDispatchDto update(OrderDispatchRequest orderDispatchRequest);
+
 
 }

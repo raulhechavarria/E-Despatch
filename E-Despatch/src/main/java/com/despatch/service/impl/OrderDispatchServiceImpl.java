@@ -47,14 +47,32 @@ public class OrderDispatchServiceImpl implements OrderDispatchService {
 			orderDispatch.setTrailer(orderDispatchRequest.getTrailer());
 			orderDispatch.setTruckNumber(orderDispatchRequest.getTruckNumber());
 			orderDispatch = orderDispatchRepository.save(orderDispatch);
+			
 			orderDispatch.setOrderDispatchNumber(null);
 			orderDispatch = orderDispatchRepository.save(orderDispatch);			
+			
 			OrderDispatchDto dto = new OrderDispatchDto(orderDispatch.getId(), orderDispatch.getTruckNumber(), orderDispatch.getTrailer(), orderDispatch.getStatus(),
 					orderDispatch.getOrderDispatchNumber());
 			return dto;
 		} else {
 			return null;
 		}
+	}
+
+	@Override
+	public OrderDispatchDto update(OrderDispatchRequest orderDispatchRequest) {
+		OrderDispatch orderDispatch = new OrderDispatch();
+		orderDispatch.setStatus(StatusEnum.created);
+		orderDispatch.setTrailer(orderDispatchRequest.getTrailer());
+		orderDispatch.setTruckNumber(orderDispatchRequest.getTruckNumber());
+	    orderDispatch.setId(orderDispatchRequest.getId());
+		orderDispatch = orderDispatchRepository.save(orderDispatch);
+		
+		
+		OrderDispatchDto dto = new OrderDispatchDto(orderDispatch.getId(), orderDispatch.getTruckNumber(), orderDispatch.getTrailer(), orderDispatch.getStatus(),
+				orderDispatch.getOrderDispatchNumber());
+		
+		return dto;
 	}
 
 }
