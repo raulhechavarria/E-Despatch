@@ -35,10 +35,13 @@ public class OrderDispatch {
 	@Column(name = "status")
 	private StatusEnum status;
 	
+	@Column(name = "statusDeliveryTruck")
 	private StatusEnumDeliveryTruck statusDeliveryTruck;
 	
+	@Column(name = "statuEnumCustomer")
 	private StatuEnumCustomer statuEnumCustomer;
 	
+	@Column(name = "statuEnumProvider")
 	private StatuEnumProvider statuEnumProvider;
 
 	@Column(name = "orderDispatchNumber")

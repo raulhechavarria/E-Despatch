@@ -3,7 +3,10 @@ package com.despatch.rest.request;
 import com.despatch.entity.company.Broker;
 import com.despatch.entity.company.Customer;
 import com.despatch.entity.company.Provider;
+import com.despatch.entity.enumerator.StatuEnumCustomer;
+import com.despatch.entity.enumerator.StatuEnumProvider;
 import com.despatch.entity.enumerator.StatusEnum;
+import com.despatch.entity.enumerator.StatusEnumDeliveryTruck;
 import com.despatch.entity.enumerator.TypeCompanyEnum;
 
 public class OrderDispatchRequest {
@@ -15,6 +18,12 @@ public class OrderDispatchRequest {
 	private String trailer;
 
 	private StatusEnum status;
+
+	private StatusEnumDeliveryTruck statusDeliveryTruck;
+
+	private StatuEnumCustomer statuEnumCustomer;
+
+	private StatuEnumProvider statuEnumProvider;
 
 	private String orderDispatchNumber;
 
@@ -97,6 +106,29 @@ public class OrderDispatchRequest {
 	public void setProvider(Provider provider) {
 		this.provider = provider;
 	}
-	
-	
+
+	public StatusEnumDeliveryTruck getStatusDeliveryTruck() {
+		return statusDeliveryTruck;
+	}
+
+	public void setStatusDeliveryTruck(StatusEnumDeliveryTruck statusDeliveryTruck) {
+		this.statusDeliveryTruck = statusDeliveryTruck;
+	}
+
+	public StatuEnumCustomer getStatuEnumCustomer() {
+		return statuEnumCustomer;
+	}
+
+	public void setStatuEnumCustomer(StatuEnumCustomer statuEnumCustomer) {
+		this.statuEnumCustomer = statuEnumCustomer;
+	}
+
+	public StatuEnumProvider getStatuEnumProvider() {
+		return statuEnumProvider;
+	}
+
+	public void setStatuEnumProvider(StatuEnumProvider statuEnumProvider) {
+		this.statuEnumProvider = statuEnumProvider;
+	}
+ 
 }
