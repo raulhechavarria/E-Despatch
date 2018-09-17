@@ -1,5 +1,8 @@
 package com.despatch.rest.request;
 
+import com.despatch.entity.company.Broker;
+import com.despatch.entity.company.Customer;
+import com.despatch.entity.company.Provider;
 import com.despatch.entity.enumerator.StatusEnum;
 import com.despatch.entity.enumerator.TypeCompanyEnum;
 
@@ -16,6 +19,12 @@ public class OrderDispatchRequest {
 	private String orderDispatchNumber;
 
 	private TypeCompanyEnum typeCompanyEnum;
+
+	private Customer customer;
+
+	private Broker broker;
+
+	private Provider provider;
 
 	public TypeCompanyEnum getTypeCompanyEnum() {
 		return typeCompanyEnum;
@@ -64,4 +73,30 @@ public class OrderDispatchRequest {
 	public void setOrderDispatchNumber(String orderDispatchNumber) {
 		this.orderDispatchNumber = orderDispatchNumber;
 	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Broker getBroker() {
+		return broker;
+	}
+
+	public void setBroker(Broker broker) {
+		this.broker = broker;
+	}
+
+	public Provider getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
+	}
+	
+	
 }

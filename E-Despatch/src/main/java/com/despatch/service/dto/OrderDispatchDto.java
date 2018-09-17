@@ -1,9 +1,12 @@
 package com.despatch.service.dto;
 
+import com.despatch.entity.company.Broker;
+import com.despatch.entity.company.Customer;
+import com.despatch.entity.company.Provider;
 import com.despatch.entity.enumerator.StatusEnum;
 
 public class OrderDispatchDto {
-	
+
 	private Long id;
 
 	private String truckNumber;
@@ -14,7 +17,14 @@ public class OrderDispatchDto {
 
 	private String orderDispatchNumber;
 
-	public OrderDispatchDto(Long id, String truckNumber, String trailer, StatusEnum status, String orderDispatchNumber) {
+	private Customer customer;
+
+	private Broker broker;
+
+	private Provider provider;
+
+	public OrderDispatchDto(Long id, String truckNumber, String trailer, StatusEnum status,
+			String orderDispatchNumber) {
 		super();
 		this.id = id;
 		this.truckNumber = truckNumber;
@@ -62,4 +72,30 @@ public class OrderDispatchDto {
 	public void setOrderDispatchNumber(String orderDispatchNumber) {
 		this.orderDispatchNumber = orderDispatchNumber;
 	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Broker getBroker() {
+		return broker;
+	}
+
+	public void setBroker(Broker broker) {
+		this.broker = broker;
+	}
+
+	public Provider getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
+	}
+	
+	
 }

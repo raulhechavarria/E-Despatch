@@ -5,8 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.despatch.entity.company.Broker;
+import com.despatch.entity.company.Customer;
+import com.despatch.entity.company.Provider;
 import com.despatch.entity.enumerator.StatusEnum;
 
 @Entity
@@ -30,8 +35,43 @@ public class OrderDispatch {
 	@Column(name = "orderDispatchNumber")
 	private String orderDispatchNumber;
 	
+	@ManyToOne
+	@JoinColumn(name = "customer_id", nullable = true)
+	private Customer customer;
+	
+	@ManyToOne
+	@JoinColumn(name = "broker_id", nullable = true)	
+	private Broker broker;
+	
+	@ManyToOne
+	@JoinColumn(name = "provider_id", nullable = true)	
+	private Provider provider;
 	
 	
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Broker getBroker() {
+		return broker;
+	}
+
+	public void setBroker(Broker broker) {
+		this.broker = broker;
+	}
+
+	public Provider getProvider() {
+		return provider;
+	}
+
+	public void setProvider(Provider provider) {
+		this.provider = provider;
+	}
+
 	public Long getId() {
 		return id;
 	}
