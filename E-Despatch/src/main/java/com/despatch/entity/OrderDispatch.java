@@ -12,7 +12,10 @@ import javax.persistence.Table;
 import com.despatch.entity.company.Broker;
 import com.despatch.entity.company.Customer;
 import com.despatch.entity.company.Provider;
+import com.despatch.entity.enumerator.StatuEnumCustomer;
+import com.despatch.entity.enumerator.StatuEnumProvider;
 import com.despatch.entity.enumerator.StatusEnum;
+import com.despatch.entity.enumerator.StatusEnumDeliveryTruck;
 
 @Entity
 @Table(name = "orderDispatch")
@@ -31,6 +34,12 @@ public class OrderDispatch {
 	
 	@Column(name = "status")
 	private StatusEnum status;
+	
+	private StatusEnumDeliveryTruck statusDeliveryTruck;
+	
+	private StatuEnumCustomer statuEnumCustomer;
+	
+	private StatuEnumProvider statuEnumProvider;
 
 	@Column(name = "orderDispatchNumber")
 	private String orderDispatchNumber;
