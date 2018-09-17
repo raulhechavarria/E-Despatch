@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.despatch.rest.request.BrokerRequest;
-import com.despatch.rest.request.BrokerRequest;
 import com.despatch.service.BrokerService;
-import com.despatch.service.dto.BrokerDto;
 import com.despatch.service.dto.BrokerDto;
 
 @RestController

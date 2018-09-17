@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.despatch.rest.request.DeliveryTruckRequest;
-import com.despatch.rest.request.DeliveryTruckRequest;
 import com.despatch.service.DeliveryTruckService;
-import com.despatch.service.dto.DeliveryTruckDto;
 import com.despatch.service.dto.DeliveryTruckDto;
 
 @RestController

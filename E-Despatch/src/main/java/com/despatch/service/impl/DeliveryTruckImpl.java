@@ -6,12 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.despatch.entity.company.Customer;
 import com.despatch.entity.company.DeliveryTruck;
 import com.despatch.repository.DeliveryTruckRepository;
 import com.despatch.rest.request.DeliveryTruckRequest;
 import com.despatch.service.DeliveryTruckService;
-import com.despatch.service.dto.CustomerDto;
 import com.despatch.service.dto.DeliveryTruckDto;
 @Service
 public class DeliveryTruckImpl implements DeliveryTruckService {

@@ -7,11 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.despatch.entity.company.Broker;
-import com.despatch.entity.company.Broker;
 import com.despatch.repository.BrokerRepository;
 import com.despatch.rest.request.BrokerRequest;
 import com.despatch.service.BrokerService;
-import com.despatch.service.dto.BrokerDto;
 import com.despatch.service.dto.BrokerDto;
 @Service
 public class BrokerServiceImpl implements BrokerService {
