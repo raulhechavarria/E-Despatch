@@ -1,5 +1,9 @@
 package com.despatch.service.dto;
 
+import java.util.Date;
+
+import javax.persistence.Column;
+
 import com.despatch.entity.company.Broker;
 import com.despatch.entity.company.Customer;
 import com.despatch.entity.company.Provider;
@@ -31,6 +35,12 @@ public class OrderDispatchDto {
 	private Broker broker;
 
 	private Provider provider;
+
+	private Date dateCreate;
+
+	private Date datePickup;
+
+	private Date dateDelivery;
 
 	public OrderDispatchDto(Long id, String truckNumber, String trailer, StatusEnum status,
 			String orderDispatchNumber) {
@@ -130,5 +140,28 @@ public class OrderDispatchDto {
 		this.statuEnumProvider = statuEnumProvider;
 	}
 
-	
+	public Date getDateCreate() {
+		return dateCreate;
+	}
+
+	public void setDateCreate(Date dateCreate) {
+		this.dateCreate = dateCreate;
+	}
+
+	public Date getDatePickup() {
+		return datePickup;
+	}
+
+	public void setDatePickup(Date datePickup) {
+		this.datePickup = datePickup;
+	}
+
+	public Date getDateDelivery() {
+		return dateDelivery;
+	}
+
+	public void setDateDelivery(Date dateDelivery) {
+		this.dateDelivery = dateDelivery;
+	}
+
 }

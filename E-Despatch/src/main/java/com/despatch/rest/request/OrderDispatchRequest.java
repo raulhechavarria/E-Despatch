@@ -1,5 +1,9 @@
 package com.despatch.rest.request;
 
+import java.util.Date;
+
+import javax.persistence.Column;
+
 import com.despatch.entity.company.Broker;
 import com.despatch.entity.company.Customer;
 import com.despatch.entity.company.Provider;
@@ -34,6 +38,12 @@ public class OrderDispatchRequest {
 	private Broker broker;
 
 	private Provider provider;
+
+	private Date dateCreate;
+
+	private Date datePickup;
+
+	private Date dateDelivery;
 
 	public TypeCompanyEnum getTypeCompanyEnum() {
 		return typeCompanyEnum;
@@ -130,5 +140,30 @@ public class OrderDispatchRequest {
 	public void setStatuEnumProvider(StatuEnumProvider statuEnumProvider) {
 		this.statuEnumProvider = statuEnumProvider;
 	}
- 
+
+	public Date getDateCreate() {
+		return dateCreate;
+	}
+
+	public void setDateCreate(Date dateCreate) {
+		this.dateCreate = dateCreate;
+	}
+
+	public Date getDatePickup() {
+		return datePickup;
+	}
+
+	public void setDatePickup(Date datePickup) {
+		this.datePickup = datePickup;
+	}
+
+	public Date getDateDelivery() {
+		return dateDelivery;
+	}
+
+	public void setDateDelivery(Date dateDelivery) {
+		this.dateDelivery = dateDelivery;
+	}
+
+	
 }

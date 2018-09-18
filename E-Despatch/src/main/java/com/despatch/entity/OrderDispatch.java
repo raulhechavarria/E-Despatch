@@ -1,5 +1,7 @@
 package com.despatch.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -59,6 +61,14 @@ public class OrderDispatch {
 	@JoinColumn(name = "provider_id", nullable = true)	
 	private Provider provider;
 	
+	@Column(name = "dateCreate")
+	private Date dateCreate;
+	
+	@Column(name = "datePickup")
+	private Date datePickup;
+	
+	@Column(name = "dateDelivery")
+	private Date dateDelivery;
 	
 	public Customer getCustomer() {
 		return customer;
@@ -169,6 +179,54 @@ public class OrderDispatch {
 			this.orderDispatchNumber = orderDispatchNumber;
 		}
 		
+	}
+
+	public StatusEnumDeliveryTruck getStatusDeliveryTruck() {
+		return statusDeliveryTruck;
+	}
+
+	public void setStatusDeliveryTruck(StatusEnumDeliveryTruck statusDeliveryTruck) {
+		this.statusDeliveryTruck = statusDeliveryTruck;
+	}
+
+	public StatuEnumCustomer getStatuEnumCustomer() {
+		return statuEnumCustomer;
+	}
+
+	public void setStatuEnumCustomer(StatuEnumCustomer statuEnumCustomer) {
+		this.statuEnumCustomer = statuEnumCustomer;
+	}
+
+	public StatuEnumProvider getStatuEnumProvider() {
+		return statuEnumProvider;
+	}
+
+	public void setStatuEnumProvider(StatuEnumProvider statuEnumProvider) {
+		this.statuEnumProvider = statuEnumProvider;
+	}
+
+	public Date getDateCreate() {
+		return dateCreate;
+	}
+
+	public void setDateCreate(Date dateCreate) {
+		this.dateCreate = dateCreate;
+	}
+
+	public Date getDatePickup() {
+		return datePickup;
+	}
+
+	public void setDatePickup(Date datePickup) {
+		this.datePickup = datePickup;
+	}
+
+	public Date getDateDelivery() {
+		return dateDelivery;
+	}
+
+	public void setDateDelivery(Date dateDelivery) {
+		this.dateDelivery = dateDelivery;
 	}
 
 	
