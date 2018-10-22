@@ -13,4 +13,10 @@ public interface ProductService {
 
 	Boolean deleteProduct(Long id);
 
+	List<ProductDto> findByName(String name);
+
+	ProductDto findById(Long id);
+
+	ProductDto updateProduct(ProductRequest productRequest);
+
 }

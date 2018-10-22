@@ -1,11 +1,6 @@
 package com.despatch.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.despatch.entity.enumerator.UMEnum;
 
@@ -17,12 +12,45 @@ public class Product {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Long id;
- 
+
 	@Column(name = "name")
 	private String name;
 
-	@Column(name="um")
+	@Column(name = "description")
+	private String description;
+	
+	@Column(name = "price")
+	private String price;
+	
+	@Column(name = "weight")
+	private String weight;
+
+	@Column(name = "um")
 	private UMEnum um;
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	public Long getId() {
 		return id;
@@ -48,5 +76,4 @@ public class Product {
 		this.um = um;
 	}
 
-	
 }

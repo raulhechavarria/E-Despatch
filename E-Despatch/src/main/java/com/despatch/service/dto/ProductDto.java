@@ -6,15 +6,50 @@ public class ProductDto {
 	private Long id;
 
 	private String name;
+	
+	private String description;
+	
+	private String price;
+	
+	private String weight;
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
 
 	private UMEnum um;
 
 	
 	
-	public ProductDto(Long id, String name, UMEnum um) {
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	
+
+	public ProductDto(Long id, String name, String description, String price, String weight, UMEnum um) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.weight = weight;
 		this.um = um;
 	}
 

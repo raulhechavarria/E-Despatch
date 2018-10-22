@@ -73,4 +73,14 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDto;
 	}
 
+	@Override
+	public CustomerDto findCustomerById(Long id) {
+		Customer customer = customerRepository.findById(id).get();
+		CustomerDto customerDto = new CustomerDto();
+		customerDto.setAddress(customer.getAddress());
+		customerDto.setName(customer.getName());
+		customerDto.setId(customer.getId());
+		return customerDto;
+	}
+
 }

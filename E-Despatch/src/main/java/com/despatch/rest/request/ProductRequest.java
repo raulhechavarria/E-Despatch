@@ -7,7 +7,38 @@ public class ProductRequest {
 
 	private String name;
 
-	private UMEnum um;
+	private String um;
+	
+	private String description;
+	
+	private String price;
+	
+	private String weight;
+
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
 
 	public Long getId() {
 		return id;
@@ -25,13 +56,15 @@ public class ProductRequest {
 		this.name = name;
 	}
 
-	public UMEnum getUm() {
+	public String getUm() {
 		return um;
 	}
 
-	public void setUm(UMEnum um) {
+	public void setUm(String um) {
 		this.um = um;
 	}
+
+	
 
 	
 }
